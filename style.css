@@ -2,7 +2,7 @@
 /* Reset basic default spacing */
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   background-color: #f4f4f4;
   color: #333;
 }
@@ -88,8 +88,17 @@ section p {
   opacity: 0;
 }
 
-/* On hover, expand and show full text*/
+/* Hide image and titles on card hover */
+section div:hover img,
+section div:hover h2,
+section div:hover h3 {
+  opacity: 0;           /* Make them invisible */
+  transition: opacity 0.3s ease;
+}
+/* Show paragraph text on hover */
 section div:hover p {
-  max-height: 200px;
+  max-height: none;
   opacity: 1;
+  width: 100%;
+  background-color: #003c71;
 }
